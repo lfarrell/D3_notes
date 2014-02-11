@@ -5,4 +5,4 @@ Personal notes on using the awesome d3.js library relying heavily on the example
 * Data Visualization with D3.js Cookbook by Nick Qi Zhu (https://github.com/NickQiZhu/d3-cookbook and http://www.packtpub.com/data-visualization-with-d3-js-cookbook/book)
 * Developing a D3.js Edge by Roland Dunn, Ger Hobbelt, Andrew Thornton and Chris Viau (http://bleedingedgepress.com/our-books/developing-a-d3-js-edge/)
 * The videos of Robin Linderberg (http://www.youtube.com/user/d3Vienno/videos)
-* The wonderful examples on http://bl.ocks.org/ and 
+* The wonderful examples on http://bl.ocks.org/
