@@ -16,7 +16,7 @@ var data = [
     {x: 43, y: 99}
 ]
 
-// Create grouping for path line
+// Create grouping for path line and move down 100 px and to the right 100 px
 var group = svg.append("g")
     .attr("transform", "translate(100, 100)")
 
