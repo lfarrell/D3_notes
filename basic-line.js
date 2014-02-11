@@ -20,6 +20,7 @@ var data = [
 var group = svg.append("g")
     .attr("transform", "translate(100, 100)")
 
+// Create the path line generator and set required accessor functions for line(the x and y coords for each bit of the line)
 var line = d3.svg.line()
     .x(function(d) { return d.x; })
     .y(function(d) { return y.x; });
