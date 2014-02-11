@@ -62,9 +62,19 @@ d3.tsv("data/data.tsv", function(error, data) {
     x.domain(d3.extent(data, function(d) { return d.date; })); //The .extent function that finds the maximum and minimum values in the array.  Most useful for non-linear data like the timescale used here.
     y.domain([0, d3.max(data, function(d) { return d.close; })]);
 
+    // add the graph line
     svg.append("path")
      //   .style("stroke-dasharray", ("3, 3"))// can add stroke dash.  This is 3 pixels on 3 pixels off.
         .attr("d", valueline(data)); // Add the valueline path. "d" stands for ‘path data’ in an svg path segment.  Really the points needed to create the line
+
+    // in each data value as a point if desired.  Better to place after line generation as putting it first cause the line to display on top of the dots
+    svg.selectAll("dot")
+        .data(data)
+        .enter().append("circle")
+        .attr("r", 3.5)
+        .attr("cx", function(d) { return x(d.date); })
+        .attr("cy", function(d) { return y(d.close); });
+
 
     // Add the actual x axis as an svg g element
     svg.append("g") // Add the X Axis
