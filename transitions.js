@@ -41,13 +41,13 @@ yScale.domain([0, d3.max(dataset)]);
 // Update the axises if needed
 //  already referencing a scale so don't need to include here
 
-//Update x-axis
+//Update x-axis assuming your axis has a class "x axis"
 svg.select(".x.axis")
     .transition()
     .duration(1000)
     .call(xAxis);
 
-//Update y-axis
+//Update y-axis assuming your axis has a class "y axis"
 svg.select(".y.axis")
     .transition()
     .duration(1000)
