@@ -57,7 +57,7 @@ svg.select(".y.axis")
 * Exiting and removing
  */
 bars.exit() // bars equals your selection.
-    .transition()
+    .transition()// can leave off transition and duration, but this makes it smoother
     .duration(500)
     .attr("x", w) // slide it off to the right
     .remove(); // remove it
