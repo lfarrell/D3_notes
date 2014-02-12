@@ -54,6 +54,25 @@ svg.select(".y.axis")
     .call(yAxis);
 
 /**
+ * Adding just one element to current selection without changing current selection
+ *
+ * take current selection and enter and append the new selection giving it the attributes you want.  The changes will only affect the new selection
+ */
+bars.enter()
+    .append("rect")
+    .attr("x", w)
+    .attr("y", function(d) {
+        return h - yScale(d);
+    })
+    .attr("width", xScale.rangeBand())
+    .attr("height", function(d) {
+        return yScale(d);
+    })
+    .attr("fill", function(d) {
+        return "rgb(0, 0, " + (d * 10) + ")";
+    });
+
+/**
 * Exiting and removing
  */
 bars.exit() // bars equals your selection.
