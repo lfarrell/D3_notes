@@ -33,3 +33,31 @@ svg.selectAll("text")
    .attr("y", function(d) {
         return h - yScale(d) + 14;
    });
+
+//if need be update the domain for example
+//Update scale domain
+yScale.domain([0, d3.max(dataset)]);
+
+// Update the axises if needed
+//  already referencing a scale so don't need to include here
+
+//Update x-axis
+svg.select(".x.axis")
+    .transition()
+    .duration(1000)
+    .call(xAxis);
+
+//Update y-axis
+svg.select(".y.axis")
+    .transition()
+    .duration(1000)
+    .call(yAxis);
+
+/**
+* Exiting and removing
+ */
+bars.exit() // bars equals your selection.
+    .transition()
+    .duration(500)
+    .attr("x", w) // slide it off to the right
+    .remove(); // remove it
